@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/style/style.css}" rel="stylesheet">
+</head>
+<body>
+<div th:insert="fragments/header :: block-header"></div>
+<div class="content">
+    <form>
+      <label> Id </label>
+      <input type="text" disabled th:field="${book.Id}">
+      <label> Text </label>
+      <input type="text" disabled th:field="${book.title}">
+      <label> Isbn </label>
+      <input type="text" disabled th:field="${book.isbn}">
+      <label> Publisher </label>
+      <input type="text" disabled th:field="${book.publisher.publisherName}">
+    </form>
+</div>
+</body>
+</html>

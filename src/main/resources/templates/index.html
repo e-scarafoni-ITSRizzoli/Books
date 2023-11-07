@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/style/style.css}" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <div th:insert="fragments/header :: block-header"></div>
+    </div>
+
+    <div class="content">
+        <h2> Menu da index </h2>
+        <a th:href="${'/book/books'}" style="color: black"> Lista dei libri </a>
+    </div>
+
+
+
+</body>
+</html>

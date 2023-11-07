@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/style/style.css}" rel="stylesheet">
+</head>
+<body>
+<div th:insert="fragments/header :: block-header"></div>
+<div class="content">
+    <h1> Publishers </h1>
+    <table>
+        <tr>
+            <th> Publisher ID </th>
+            <th> Publisher Name </th>
+            <th> Address </th>
+            <th> City </th>
+        </tr>
+
+        <tr th:each="publisher : ${publishers}">
+            <td th:text="${publisher.Id}">  </td>
+            <td th:text="${publisher.publisherName}"> </td>
+            <td th:text="${publisher.address}">  </td>
+            <td th:text="${publisher.city}">  </td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
